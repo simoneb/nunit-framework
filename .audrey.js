@@ -12,6 +12,6 @@ module.exports = {
   },
   matrix: [
     { env: { framework: 'net-4.5', command: 'runbuild.cmd' }, requirements: ['win'] },
-    { env: { framework: 'mono-4.5', command: './runbuild' }, requirements: ['linux'] }
+    { env: { framework: 'mono-4.5', command: './runbuild' }, timeout: 180, requirements: ['linux'] }
   ]
 };
