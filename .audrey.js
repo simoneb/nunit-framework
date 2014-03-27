@@ -2,6 +2,7 @@ module.exports = {
   script: '$command /p:Configuration=Release /p:Framework=$framework "/t:DumpSettings;CleanAll;Build;Test"',
   requirements: {
     linux: [
+      { type: 'which', input: 'xbuild' },
       { type: 'which', input: 'mono' },
       { type: 'cmd', input: 'mono --version', output: /3.\d/ },
       { type: 'js', input: "require('os').type()", output: /linux/i }
