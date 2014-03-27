@@ -3,7 +3,7 @@ module.exports = {
   requirements: {
     linux: [
       { type: 'which', input: 'mono' },
-      { type: 'cmd', input: 'mono --version', output: /3.2.1/ },
+      { type: 'cmd', input: 'mono --version', output: /3.\d/ },
       { type: 'js', input: "require('os').type()", output: /linux/i }
     ],
     win: [
