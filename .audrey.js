@@ -4,11 +4,11 @@ module.exports = {
     linux: [
       { type: 'which', input: 'xbuild' },
       { type: 'which', input: 'mono' },
-      { type: 'cmd', input: 'mono --version', output: /3.\d/ },
-      { type: 'js', input: "require('os').type()", output: /linux/i }
+      { type: 'cmd', input: 'mono --version', match: /3.\d/ },
+      { type: 'js', input: "require('os').type()", match: /linux/i }
     ],
     win: [
-      { type: 'js', input: "require('os').type()", output: /windows/i }
+      { type: 'js', input: "require('os').type()", match: /windows/i }
     ]
   },
   matrix: [
